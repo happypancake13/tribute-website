@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Life in Moments</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== LANDING PAGE ===================== -->
+  <section id="landing">
+
+    <!-- Background: swap src for a real image/video later -->
+    <div id="landing-bg"></div>
+
+    <div id="landing-content">
+      <h1 id="main-title">A Life in Moments</h1>
+      <p id="main-subtitle">A tribute to someone worth remembering.</p>
+      <button id="begin-btn">Begin Journey</button>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section id="timeline">
+
+    <h2 class="section-heading">The Journey</h2>
+
+    <!-- Each .milestone is one life event -->
+    <!-- You'll add more of these as you collect stories/photos -->
+    <div class="milestone" data-year="1960">
+      <div class="milestone-dot"></div>
+      <div class="milestone-card">
+        <span class="milestone-date">1960</span>
+        <h3 class="milestone-title">The Beginning</h3>
+        <p class="milestone-story">A placeholder story about this moment in life. Replace with the real memory.</p>
+        <!-- Add <img> tags here when you have photos -->
+      </div>
+    </div>
+
+    <div class="milestone" data-year="1975">
+      <div class="milestone-dot"></div>
+      <div class="milestone-card">
+        <span class="milestone-date">1975</span>
+        <h3 class="milestone-title">Growing Up</h3>
+        <p class="milestone-story">Another placeholder. What was life like at this point?</p>
+      </div>
+    </div>
+
+    <div class="milestone" data-year="1990">
+      <div class="milestone-dot"></div>
+      <div class="milestone-card">
+        <span class="milestone-date">1990</span>
+        <h3 class="milestone-title">A New Chapter</h3>
+        <p class="milestone-story">Keep adding milestones. There's no limit.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== FINAL MESSAGE ===================== -->
+  <section id="finale">
+
+    <div id="finale-content">
+      <!-- Swap for a real family photo -->
+      <img id="finale-photo" src="assets/images/family.jpg" alt="Family photo" />
+      <h2 id="finale-heading">Thank You</h2>
+      <p id="finale-message">
+        For everything you gave, every lesson you taught, and every memory you made.
+        You are loved — always.
+      </p>
+    </div>
+
+    <!-- Confetti will be injected here by JS -->
+    <div id="confetti-container"></div>
+
+  </section>
+
+
+  <!-- ===================== MUSIC PLAYER ===================== -->
+  <!-- Fixed bar — visible on all sections -->
+  <div id="music-player">
+    <audio id="bg-audio" loop>
+      <source src="assets/audio/background.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="play-pause-btn">▶ Play</button>
+    <label for="volume-slider">Vol</label>
+    <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.5" />
+  </div>
+
+
+  <!-- ===================== EASTER EGGS ===================== -->
+  <!-- Hidden elements revealed by interactions (JS controls visibility) -->
+  <div id="easter-egg-watch" class="easter-egg hidden">
+    <img src="assets/images/childhood.jpg" alt="Childhood photo" />
+    <button class="close-egg">✕</button>
+  </div>
+
+  <div id="easter-egg-name" class="easter-egg hidden">
+    <p>"That's the name only family used."</p>
+    <button class="close-egg">✕</button>
+  </div>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
