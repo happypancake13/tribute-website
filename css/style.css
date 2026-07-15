@@ -1,0 +1,45 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: Georgia, serif;
+}
+
+/* Landing section */
+#landing {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Main title */
+#main-title {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* Subtitle */
+#main-subtitle {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: #aaaaaa;
+}
+
+/* Button */
+#begin-btn {
+  padding: 12px 32px;
+  font-size: 16px;
+  background: gold;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
