@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+
+
+
 /* Body */
 body {
   background-color: #0a0a0a;
@@ -21,6 +24,7 @@ body {
   text-align: center;
 }
 
+
 /* Main title */
 #main-title {
   font-size: 48px;
@@ -36,10 +40,176 @@ body {
 
 /* Button */
 #begin-btn {
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
   padding: 12px 32px;
   font-size: 16px;
-  background: gold;
-  color: black;
+  background: #04064b;
+  color:#fffff0;
   border: none;
   cursor: pointer;
 }
+
+#begin-btn:hover{
+  background-color:gold;
+  color: #f5f0e8
+}
+
+/* Timeline section */
+#timeline {
+  
+display: none;
+
+  
+  position: relative;
+  height: 100vh;
+
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Each milestone takes full screen */
+
+.milestone-date {
+  font-size: 60px;
+  color: gold;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.milestone-title {
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+
+.milestone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap:60px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  padding: 120px 80px 80px 200px;
+}
+
+.milestone-card {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+  border-left: 3px solid gold;
+}
+
+.milestone img {
+  flex: 1;
+  max-width: 400px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+
+/* Only the active milestone is visible */
+#music-player {
+  display: none;
+}
+
+.easter-egg {
+  display: none;
+}
+
+
+.milestone.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+/* Section heading */
+.section-heading {
+  position: fixed;
+  top: 50px;
+  left: 70px;
+  font-size: 36px;
+  color: gold;
+}
+
+/* Milestone date */
+.milestone-date {
+  font-size: 14px;
+  color: gold;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+/* Milestone title */
+.milestone-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+/* Milestone story */
+.milestone-story {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cccccc;
+  max-width: 600px;
+}
+
+/* Arrow buttons */
+#prev-btn, #next-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: gold;
+  border: 2px solid gold;
+  font-size: 24px;
+  padding: 12px 18px;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.3s;
+}
+
+#prev-btn { left: 20px; }
+#next-btn { right: 20px; }
+
+#prev-btn:hover, #next-btn:hover {
+  background: gold;
+  color: black;
+}
+
+#finale {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#home-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  color: gold;
+  border: 2px solid gold;
+  padding: 8px 16px;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.3s;
+}
+
+#home-btn:hover {
+  background: gold;
+  color: black;
+}
+
